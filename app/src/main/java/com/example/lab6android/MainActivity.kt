@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             val country = parent.getItemAtPosition(position) as Country
             Toast.makeText(
                 this@MainActivity,
-                "Selected: ${country.countryName}",
+                "Selected: ${country.countryName} (Population: ${country.population})",
                 Toast.LENGTH_LONG
             ).show()
         }
