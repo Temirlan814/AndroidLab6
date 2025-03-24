@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         listView.adapter = CustomListAdapter(this, imageDetails)
 
-        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, _, position, _ ->
+        listView.setOnItemClickListener{ parent, _, position, _ ->
             val country = parent.getItemAtPosition(position) as Country
             Toast.makeText(
                 this@MainActivity,
@@ -29,15 +29,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun getListData(): List<Country> {
-        val list = mutableListOf<Country>()
-        val vietnam = Country("Vietnam", "vn", 98000000)
-        val usa = Country("USA", "us", 320000000)
-        val russia = Country("Russia", "ru", 142000000)
-
-        list.add(vietnam)
-        list.add(usa)
-        list.add(russia)
-
-        return list
+        return listOf(
+            Country("Vietnam", "vn", 98000000),
+            Country("USA", "us", 320000000),
+            Country("Russia", "ru", 142000000)
+        )
     }
 }
