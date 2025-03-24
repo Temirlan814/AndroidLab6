@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">lab6Android</string>
+    <string name="flag_image" />
 </resources>
